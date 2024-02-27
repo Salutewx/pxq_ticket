@@ -38,8 +38,6 @@ pub struct LoginData {
     pub refresh_token: String,
 }
 
-
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct LoginResult {
     #[serde(rename = "statusCode")]
@@ -54,7 +52,6 @@ pub struct UserProfile {
     pub avatar: String,
 }
 
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UserProfileResult {
     #[serde(rename = "statusCode")]
@@ -62,7 +59,6 @@ pub struct UserProfileResult {
     comments: String,
     data: Option<UserProfile>,
 }
-
 
 #[tauri::command(async)]
 pub async fn send_verification_code(

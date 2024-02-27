@@ -69,7 +69,7 @@
         "label": "main",
         "title": "票星球",
         "fullscreen": false,
-        "resizable": false,
+        "resizable": true,
         "width": 1280,
         "height": 720,
         "center": true

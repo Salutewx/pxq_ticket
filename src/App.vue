@@ -10,7 +10,7 @@ onMounted(async ()=>{
     router.push('login')
   }else{
     console.log(access_token)
-    router.push('task')
+    router.push('show')
   }
 })
 </script>

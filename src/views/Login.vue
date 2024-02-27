@@ -1,6 +1,6 @@
 <template>
   <div class="fixed inset-0 overflow-y-auto flex justify-center items-center bg-gray-500 bg-opacity-50">
-    <div class="bg-white rounded-md p-8 w-96">
+    <div class="bg-white rounded-md p-8 w-96 border border-base-300">
       <!-- <div class="flex justify-end">
         <button @click="closeLogin" class="text-gray-400 hover:text-gray-600">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -8,6 +8,7 @@
           </svg>
         </button>
       </div> -->
+      
       <div>
         <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-6">短信登录</h2>
         <form @submit.prevent="login">

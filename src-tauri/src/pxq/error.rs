@@ -1,5 +1,5 @@
+use serde_json::error;
 use thiserror::Error;
-
 
 #[derive(Error, Debug)]
 pub enum PXQError {
@@ -14,6 +14,9 @@ pub enum PXQError {
 
     #[error("获取用户信息失败")]
     GetUserProfileError,
+
+    #[error("查询门票信息失败")]
+    SearchShowError,
 }
 
 impl serde::Serialize for PXQError {

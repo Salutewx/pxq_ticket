@@ -43,17 +43,23 @@ const logout = async () => {
 </script>
 
 <template>
-  <div class="navbar bg-base-100">
+  <div class="navbar">
     <div class="navbar-start">
-      <a class="btn btn-ghost text-xl avatar c" @click="onClickGithub">Github</a>
+      <a class="btn btn-ghost text-xl avatar" @click="onClickGithub">Github</a>
     </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li>
-          <RouterLink to="/task">任务</RouterLink>
+    
+    <div class="navbar-center"> 
+      <ul tabindex="0" class="menu menu-sm menu-horizontal mt-3 z-[1] p-2 rounded-box w-52">
+        <li class="group">
+          <RouterLink to="/show"  class="block p-2" :class="{ 'active': $route.path === '/show' }">演出</RouterLink>
         </li>
-        <li>
-          <RouterLink to="/order">订单</RouterLink>
+
+        <li class="group">
+          <RouterLink to="/task"  class="block p-2" :class="{ 'active': $route.path === '/task' }">任务</RouterLink>
+        </li>
+        
+        <li class="group">
+          <RouterLink to="/order" class="block p-2" :class="{ 'active': $route.path === '/order' }">订单</RouterLink>
         </li>
       </ul>
     </div>
@@ -71,12 +77,18 @@ const logout = async () => {
     </div>
   </div>
 
-  <div class="flex">
+  <div class="container mx-auto">
     <router-view v-slot="{ Component }">
       <keep-alive>
         <component :is="Component" :key="$route.name" v-if="$route.meta.keepAlive" />
       </keep-alive>
       <component :is="Component" :key="$route.name" v-if="!$route.meta.keepAlive" />
     </router-view>
-  </div></template>
-<style scoped></style>
+  </div>
+</template>
+
+
+<style scoped>
+
+
+</style>

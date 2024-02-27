@@ -10,6 +10,14 @@ const routes: RouteRecordRaw[] = [
         },
         children: [
             { 
+                path: '/show', 
+                name: 'Show', 
+                component: () => import("./views/Show.vue"),
+                meta: {
+                    keepAlive: true,
+                }
+            },
+            { 
                 path: '/task', 
                 name: 'Task', 
                 component: () => import("./views/Task.vue"),

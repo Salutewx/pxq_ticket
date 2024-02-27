@@ -33,6 +33,7 @@ fn main() {
             pxq::user::generate_photo_code,
             pxq::user::login_by_mobile,
             pxq::user::get_user_profile,
+            pxq::show::search_show_list,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
