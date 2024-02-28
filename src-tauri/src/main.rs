@@ -34,6 +34,9 @@ fn main() {
             pxq::user::login_by_mobile,
             pxq::user::get_user_profile,
             pxq::show::search_show_list,
+            pxq::show::query_show_sessions,
+            pxq::show::add_reminder,
+            pxq::show::ticket_waitlist,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

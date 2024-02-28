@@ -1,4 +1,4 @@
-use serde_json::error;
+
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -17,6 +17,15 @@ pub enum PXQError {
 
     #[error("查询门票信息失败")]
     SearchShowError,
+
+    #[error("查询门票场次信息失败")]
+    QueryShowSessionsError,
+
+    #[error("添加抢票提醒失败")]
+    AddReminderError,
+
+    #[error("添加抢票提醒失败")]
+    TicketWaitlistError,
 }
 
 impl serde::Serialize for PXQError {

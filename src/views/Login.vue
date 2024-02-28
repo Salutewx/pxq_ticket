@@ -103,7 +103,7 @@ const login = async () => {
       await set_value("access_token", res.data.accessToken)
       await set_value("refresh_token", res.data.refreshToken)
       toast.success("登录成功")
-      router.push('task')
+      router.push('show')
     } else {
       toast.error(`登录失败, ${res.comments}`)
     }
